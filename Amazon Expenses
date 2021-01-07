@@ -1,0 +1,55 @@
+import pandas as pd
+df = pd.read_csv('C:/Users/jkatralapalli/Anaconda3/Amazon_Orders.csv')
+df.head()
+
+df.shape
+
+df = df.fillna(0)
+
+df.head()
+
+df["Item Total"] = df["Item Total"].str.replace('$','').astype(float)
+df["Item Subtotal Tax"] = df["Item Subtotal Tax"].str.replace('$','').astype(float)
+df["Item Subtotal"] = df["Item Subtotal"].str.replace('$','').astype(float)
+df.head()
+
+df["Item Total"].sum()
+
+df["Item Total"].mean()
+
+df["Item Total"].median()
+
+df["Item Total"].max()
+
+df["Item Total"].min()
+
+df["Item Subtotal Tax"].sum()
+
+df["Item Total"].sum()/df["Item Subtotal Tax"].sum()
+
+df["Item Subtotal Tax"].sum()/df["Item Total"].sum()
+
+df["Order Date"] = pd.to_datetime(df['Order Date'])
+df.head()
+
+df.head(10)
+
+%matplotlib inline
+
+df.plot.bar(x = 'Order Date', y = 'Item Total', rot=90, figsize = (20,10))
+
+df1 = df.head(5) #debug
+
+
+
+df1.shape #debug why the plot is not good
+
+df1.plot.bar(x = 'Order Date', y = 'Item Total', rot = 90) #debug
+
+df["Order Date"] #debug
+
+daily_orders = df.groupby('Order Date').sum()["Item Total"] #series not a dataframe.Groups based on indexes in the dataframe
+daily_orders.head()
+
+daily_orders.plot.bar(figsize=(20,10), color = '#61D199')
+
