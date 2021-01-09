@@ -17,5 +17,6 @@ Description: What social media/gender gap/How is age related to them feeling tha
 Goals: 
   * Learn dataframes in pandas
   * Filtering columns based on multiple conditions
-  * Learn apply and lambda functions in the context of filtering
-  * Simple operations on data set
+  * Learn 'apply' and 'lambda' functions in the context of filtering
+  * Use various different plots
+  * Filtering one column based on conditions in another column
