@@ -20,3 +20,12 @@ Goals:
   * Learn 'apply' and 'lambda' functions in the context of filtering
   * Use various different plots
   * Filtering one column based on conditions in another column
+  
+  <b>Project #3 Gender Wage Gap Analysis Using Glassdoor Salary Data
+
+Description: Is wage gap real between male and female genders? Can we use variables such as seniority, education, department of work, and job title to make a more informed conclusion? </b>
+
+Goals: 
+  * Learn plotly.express library and its visualization basics
+  * Learn pivoting and group by 
+  * Learn cufflinks library basics
